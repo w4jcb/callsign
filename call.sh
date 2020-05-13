@@ -22,8 +22,8 @@ help() {
 clear #Clears the screen
 cat << _EOF_
 
-Up is a tool that automates the update procedure for Debian and Ubuntu based
-Linux systems.
+Callsign Lookup is a tool that will look up callsigns in the FCC *DAT* file 
+EN.dat 
 
 By Carlton Bryan www.w4jcb.com (GNU/General Public License version 2.0)
 
@@ -32,7 +32,7 @@ _EOF_
 
 pas()
 {
-sleep 1
+# sleep 1
 echo
 echo
 read -p "Press Enter to continue" 
@@ -49,9 +49,7 @@ read -p "Please enter callsign:" callsign
 if [[ -z "$callsign" ]]; then
 	echo "No input entered"
 	return 
-
 fi
-
 
 CALL=$(echo $callsign | tr [:lower:] [:upper:])
 
@@ -67,6 +65,7 @@ echo
 echo "Callsign => " $CALL
 echo "NAME => " $NAME
 echo "ADDRESS => " $ADDRESS
+	
 }
 
 
@@ -77,6 +76,7 @@ until [ $selection = " " ]; do
 
 cat << _EOF_
 Press the number of your choice:
+
 
 1 – Callsign lookup.
 2 – Help.
@@ -94,4 +94,3 @@ case $selection in
 *) echo "Not a valid choice: Please try again.";pas;clear;;
 esac
 done
-
