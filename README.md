@@ -8,3 +8,9 @@ https://www.fcc.gov/uls/transactions/daily-weekly#fcc-uls-transaction-files-week
 l_amat.zip will have alot of files but the one this program reads is EN.dat.
 
 
+
+To install use this link:
+
+git clone https://github.com/w4jcb/callsign.git Local-Repo/callsign
+
+
